@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class LoggingAspect {
 
     @Around("execution(* ru.ltrnt.spring_mvc.dao.*.*(..))")
-    public Object aroundAllRepositoryMethodsAdvice(ProceedingJoinPoint joinPoint)  throws Throwable {
+    public Object aroundAllRepositoryMethodsAdvice(ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
 
         String nameOfMethod = methodSignature.getName();
